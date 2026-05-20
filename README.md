@@ -1,6 +1,6 @@
 # Sensor de Temperatura com MQTT (POO em Python)
 
-Aplicação orientada a objeto que simula um sensor de temperatura e publica leituras em um tópico MQTT.
+Aplicação orientada a objeto que simula um sensor de temperatura, publica leituras em um tópico MQTT e emite alerta para temperaturas acima de 30°C.
 
 ## Estrutura
 
@@ -31,3 +31,8 @@ python sensor_temperatura.py
 ```
 
 Por padrão, o broker usado é `test.mosquitto.org`, porta `1883`, tópico `casa/sala/temperatura`.
+
+
+## Alerta de temperatura
+
+O payload enviado agora inclui o campo `alerta_temp_alta`. Quando a leitura ultrapassa `30.0°C`, esse campo fica `true` e uma mensagem de alerta é exibida no terminal.
